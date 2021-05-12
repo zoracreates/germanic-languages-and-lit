@@ -1,0 +1,256 @@
+<html>
+<ul class="bkg-slideshow">
+    <li>
+        <span></span>
+        <div>
+        </div>
+    </li>
+
+    <li>
+        <span></span>
+        <div>
+        </div>
+    </li>
+
+    <li>
+        <span></span>
+        <div>
+        </div>
+    </li>
+
+    <li>
+        <span></span>
+        <div>
+        </div>
+    </li>
+
+</ul>
+
+</html>
+<style>
+    @keyframes imageAnimation {
+        0% {
+            opacity: 0;
+            animation-timing-function: ease-in;
+        }
+
+        8% {
+            opacity: 1;
+            animation-timing-function: ease-out;
+        }
+
+        17% {
+            opacity: 1
+        }
+
+        25% {
+            opacity: 0
+        }
+
+        100% {
+            opacity: 0
+        }
+    }
+
+    @keyframes titleAnimation {
+        0% {
+            opacity: 0
+        }
+
+        8% {
+            opacity: 1
+        }
+
+        17% {
+            opacity: 1
+        }
+
+        19% {
+            opacity: 0
+        }
+
+        100% {
+            opacity: 0
+        }
+    }
+
+    .bkg-slideshow li span {
+        opacity: 1;
+    }
+
+    ul.bkg-slideshow {
+        margin: 0px;
+        background-color: #333;
+        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/fall-slide.jpg);
+    }
+
+    .bkg-slideshow li {
+        list-style: none;
+    }
+
+    .bkg-slideshow {
+        max-height: 50vh;
+        min-height: 600px;
+        position: relative;
+    }
+
+    .bkg-slideshow li span {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        color: transparent;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: none;
+        opacity: 0;
+        z-index: 0;
+        animation: imageAnimation 36s linear infinite 0s;
+    }
+
+    .bkg-slideshow li div {
+        z-index: 2;
+        position: absolute;
+        bottom: 30px;
+        left: 0px;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        color: #fff;
+        animation: titleAnimation 36s linear infinite 0s;
+    }
+
+    .bkg-slideshow li div h2 {
+        font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+        font-size: 5rem;
+        padding: 0;
+        line-height: 200px;
+    }
+
+    @supports (animation: imageAnimation 36s linear infinite 0s) {
+
+        .bkg-slideshow li span {
+            animation: imageAnimation 36s linear infinite 0s;
+        }
+
+        .bkg-slideshow li div {
+            animation: titleAnimation 36s linear infinite 0s;
+        }
+
+        .bkg-slideshow li:nth-child(1) span {
+            background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/summer-slide.jpg)
+        }
+
+        .bkg-slideshow li:nth-child(2) span {
+            background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/fall-slide.jpg);
+            animation-delay: 6s;
+        }
+
+        .bkg-slideshow li:nth-child(3) span {
+            background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/winter-slide.jpg);
+            animation-delay: 12s;
+        }
+
+        .bkg-slideshow li:nth-child(4) span {
+            background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/spring-slide.jpg);
+            animation-delay: 18s;
+        }
+
+        /* .bkg-slideshow li:nth-child(5) span {
+            animation-delay: 24s;
+        }
+
+        .bkg-slideshow li:nth-child(6) span {
+            background-image: url(../images/6.jpg);
+            animation-delay: 30s;
+        } */
+
+        /* .bkg-slideshow li:nth-child(2) div {
+            animation-delay: 6s;
+        }
+
+        .bkg-slideshow li:nth-child(3) div {
+            animation-delay: 12s;
+        }
+
+        .bkg-slideshow li:nth-child(4) div {
+            animation-delay: 18s;
+        }
+
+        .bkg-slideshow li:nth-child(5) div {
+            animation-delay: 24s;
+        }
+
+        .bkg-slideshow li:nth-child(6) div {
+            animation-delay: 30s;
+        } */
+
+    }
+</style>
+
+
+
+.front #content-column .intro-slider.block-boxes-os_boxes_columns .block-inner {
+    max-width: none;
+    width: 100%;
+}
+.intro-slider {
+    background-color: #333;
+}
+.intro-slider .two-50>.region {
+    width: 100%;
+}
+
+.intro-slider .region.region-two-50-first {
+    position: absolute;
+}
+
+.intro-slider .region.region-two-50-second {
+    max-height: 50vh;
+    min-height: 600px;
+}
+
+
+.intro-cols h2 {
+    color: #fff;
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+.intro-cols {
+    max-width: 70%;
+    margin: 30px auto;
+
+}
+
+.intro-cols .featured-slider,
+.intro-cols .feature-text .content  {
+    background: #fff;
+    color: #000;
+}
+
+.featured-slider ul li div,
+#content-panels .intro-cols .feature-text .content {
+    padding: 20px;
+}
+
+.intro-cols .welcome-text  .contextual-links-wrapper.contextual-links-processed,
+.intro-cols .feature-text .contextual-links-wrapper.contextual-links-processed  {
+    background: light-gray;
+}
+
+.intro-cols .feature-text .contextual-links-wrapper.contextual-links-processed {
+    top: 20px !important;
+    
+}
+
+.welcome-text p.os-button a {
+    text-decoration: none !important;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    padding: 10px;
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+}

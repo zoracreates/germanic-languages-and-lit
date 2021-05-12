@@ -1,0 +1,104 @@
+<style>
+    .book-shelf .sv-list-view-teaser article .node-readmore,
+    .book-shelf .sv-list-view-teaser article .field-name-og-vocabulary {
+        display: none;
+    }
+    
+    .book-shelf .node-title {
+        font-family: 'Open Sans', arial !important;
+    }
+    
+    /* BOOKSHELF TITLE TOOLTP */
+    
+    .book-shelf .sv-list-view-teaser article img {
+        width: 200px !important;
+        height: auto !important;
+    }
+    .book-shelf .sv-list-view-teaser article {
+        width: 20%;
+    }
+    .bookshelf .book-shelf .sv-list-view-teaser article {
+        width: 25%;
+    }
+   
+    /* Tooltip container */
+    
+    .book-shelf .sv-list-view-teaser article {
+        position: relative;
+        display: inline-block;
+    }
+    /* Tooltip text */
+    
+    .book-shelf .sv-list-view-teaser article .node-header {
+        visibility: hidden;
+        width: 180px;
+        background-color: #86a057;
+        padding: 8px;
+        border-radius: 4px;
+        position: absolute;
+        z-index: 1;
+        bottom: 98%;
+        left: 5px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    .book-shelf .sv-list-view-teaser article .node-header:after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -10px;
+        border-width: 10px;
+        border-style: solid;
+        border-color: #86a057 transparent transparent transparent;
+    }
+    /* Show the tooltip text when you mouse over the tooltip container */
+    
+    .book-shelf .sv-list-view-teaser article:hover .node-header {
+        visibility: visible;
+        opacity: 1;
+    }
+   
+    .book-shelf .sv-list-view-teaser {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .landing.intel-life .band.book-shelf {
+        padding: 0 0 70px 0;
+    }
+    
+    .book-shelf .sv-list-view-teaser article .node-header a {
+        color: #FFF;
+    }
+    
+    .book-shelf h1.node-title {
+        font-size: 1.15em;
+    }
+   
+       @media (max-width:1008px) {
+       
+        .book-shelf .sv-list-view-teaser article {
+            width: 18%;
+        }
+    }
+    @media (max-width:768px) {
+       
+        .book-shelf .sv-list-view-teaser article {
+            width: 32%;
+        }
+       
+        .book-shelf .sv-list-view-teaser {
+            margin-left: 0;
+        }
+       
+    }
+
+    @media (max-width: 575px) {
+        .book-shelf .sv-list-view-teaser article {
+            width: 50%;
+        }
+    }
+
+    </style>

@@ -1,0 +1,82 @@
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+<script>
+    /* wrapp logo and main menu*/
+    var logo = document.getElementById('block-boxes-site-info');
+    var primaryNav = document.getElementById('menu-bar');
+
+    var menuWrapper = document.createElement('div');
+
+    menuWrapper.setAttribute("id", "menu-wrapper");
+
+    logo.parentNode.insertBefore(menuWrapper, logo);
+
+    menuWrapper.appendChild(logo);
+    menuWrapper.appendChild(primaryNav);
+
+    jQuery(document).ready(function () {
+
+
+
+        // TOGGLES THE SEARCH BLOCK
+        jQuery('#menu-bar ul.nice-menu li.last a[title="Site Search"]').click(function () {
+            jQuery('.block-boxes-os_search_solr_search_box').toggleClass('show');
+        });
+
+        
+
+        // makes lop news pic use full size image
+        setInterval(function () {
+            jQuery(".full-news-pic figure").each(function () {
+                jQuery(this).html(jQuery(this).html().replace("/styles/os_square_100_100/public", ""));
+            });
+        }, 250);
+
+        jQuery(".page-node.node-type-news .node-news figure").each(function () {
+            jQuery(this).html(jQuery(this).html().replace("styles/os_news_full/public", ""));
+        });
+
+
+        //PULL IN LARGE PROFILE PIC        
+        //setInterval(function () {
+
+        jQuery(".people-lop-lrg-pic article.node-person .field-name-field-person-photo").each(function () {
+            jQuery(this).html(jQuery(this).html().replace("profile_thumbnail", "profile_full"));
+        });
+        //}, 250);
+
+        /* equal heights */
+
+        var maxHeight = 0;
+        var maxHeight1 = 0;
+
+
+        jQuery(".equal-0 .region-inner .block-inner").each(function () {
+            if (jQuery(this).height() > maxHeight) { maxHeight = jQuery(this).height(); }
+        });
+        jQuery(".equal-0 .region-inner .block-inner").height(maxHeight);
+
+
+
+        jQuery(".equal-1 .region-inner .block-inner").each(function () {
+            if (jQuery(this).height() > maxHeight1) { maxHeight1 = jQuery(this).height(); }
+        });
+        jQuery(".equal-1 .region-inner .block-inner").height(maxHeight1);
+
+        jQuery(".equal-2 .region-inner .block-inner").each(function () {
+            if (jQuery(this).height() > maxHeight1) { maxHeight1 = jQuery(this).height(); }
+        });
+        jQuery(".equal-2 .region-inner .block-inner").height(maxHeight1);
+
+
+        jQuery(".equal-3 .region-inner .block-inner").each(function () {
+            if (jQuery(this).height() > maxHeight1) { maxHeight1 = jQuery(this).height(); }
+        });
+        jQuery(".equal-3 .region-inner .block-inner").height(maxHeight1);
+
+
+    });
+
+
+
+</script>
