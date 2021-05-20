@@ -124,6 +124,12 @@
         text-shadow: 1px 1px 0px rgba(0, 0, 0.8), -1px -1px 0px rgba(0, 0, 0.8);
     }
 
+    .landing.undergraduate h1#page-title {
+        text-shadow: 2px 2px 0px rgba(0, 0, 0.8), -1px -1px 0px rgba(0, 0, 0.8);
+    }
+
+   
+
     a,
     a:visited {
         transition: .5s;
@@ -1511,7 +1517,7 @@
         margin-bottom: 0px;
     }
 
-    .links-card article  header {
+    .links-card article header {
         padding: 20px 5px;
     }
 
@@ -2268,6 +2274,10 @@
         padding: 2px;
     }
 
+    .landing.undergraduate .breadcrumb a {
+        background-color: rgba(0, 0, 0, .7);
+    }
+
     .page-calendar .breadcrumb a,
     .page-calendar .breadcrumb span {
         color: #fff;
@@ -2432,7 +2442,26 @@
 
     }
 
+    @media (max-width: 631px) {
+        #columns .band.announcement {
+            margin-top: 50px;
+        }
+
+        .landing:not(.sub) h1#page-title {
+            font-size: 3em;
+        }
+
+        #columns .hero+.band {
+            margin-top: 90px;
+        }
+    }
+
     @media (max-width: 575px) {
+        .landing:not(.sub) .breadcrumb {
+            padding-top: 350px
+        }
+
+
         .book-shelf .sv-list-view-teaser article {
             width: 50%;
         }
@@ -2576,6 +2605,10 @@
             display: none;
         }
 
+        #menu-bar #block-os-primary-menu li ul li.last {
+            display: block;
+        }
+
         /* home page slider */
 
         .intro-slider {
@@ -2697,8 +2730,12 @@
             padding-top: 25px;
         }
 
-        .white-block:not(.no-title)>.block-inner>h2.block-title {
+        /* .white-block:not(.no-title)>.block-inner>h2.block-title {
             padding: 25px 2% 18px 25%;
+        } */
+
+        .white-block:not(.no-title)>.block-inner>h2.block-title {
+            padding-left: 2%;
         }
 
         /***** BASE THEME ****/
