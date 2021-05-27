@@ -2117,64 +2117,50 @@
     /* undergraduate */
 
 
-    .photo-grid li,
-    .photo-grid ul {
-        padding: 0px;
-        margin: 0px;
-        list-style: none;
+    .photo-grid .boxes-box-content {
+        display: flex;
+        flex-wrap: wrap;
     }
 
-
-
-    .photo-grid li {
+    .photo-grid p {
         width: 50%;
+        margin: 0px;
         max-height: 218px;
         overflow: hidden;
         position: relative;
+        line-height: 0;
     }
 
-    .photo-grid li p {
+    .photo-grid p a {
         position: absolute;
         bottom: 0px;
         left: 0px;
         right: 0px;
         margin-bottom: 0px !important;
         padding: 15px;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        line-height: 1.2;
         background: rgba(0, 0, 0, .7);
         transition-duration: .5s;
     }
 
-    .photo-grid li a {
+    .photo-grid  p a {
         color: #fff;
         font-weight: 400;
         text-decoration: none !important;
     }
 
-    .photo-grid li:hover a {
-        color: #333;
-    }
-
-    .photo-grid li:hover p {
+    .photo-grid p a:hover {
         color: #333;
         background-color: #E4C25A;
     }
 
-    .photo-grid li img {
+    .photo-grid img {
         margin: 0px !important;
         line-height: 1 !important;
         width: 100% !important;
         padding: 0px !important;
-        transition-duration: .5s;
-    }
-
-    .photo-grid li:hover img {
-        filter: brightness(.7);
-    }
-
-    .photo-grid ul {
-        display: flex;
-        flex-wrap: wrap;
+        line-height: 0;
     }
 
     .alumni-slider.block-boxes-os_boxes_widget_slider #layout_16_9_side .rslides_tabs .rslides_here a {
@@ -2212,6 +2198,10 @@
         height: 4px;
         display: block;
         background: #A51C30;
+    }
+
+    .alumni-slider h3 {
+        margin-top: 0px;
     }
 
     /*our students */
