@@ -128,7 +128,7 @@
         text-shadow: 2px 2px 0px rgba(0, 0, 0.8), -1px -1px 0px rgba(0, 0, 0.8);
     }
 
-   
+
 
     a,
     a:visited {
@@ -418,8 +418,15 @@
         font-size: 1rem;
     }
 
-    .slider-credit a {
+    .slider-credit {
         position: relative;
+        padding-bottom: 7px;
+    }
+
+
+
+    .slider-credit a {
+        position: absolute;
         z-index: 10;
         background: rgba(0, 0, 0, .7);
         color: #fff;
@@ -630,6 +637,10 @@
         text-transform: none;
         font-weight: normal;
         text-shadow: none;
+    }
+
+    #menu-bar ul.nice-menu li:nth-last-child(2) ul {
+        left: -160px;
     }
 
     #menu-bar ul.nice-menu .menuparent ul li {
@@ -1731,6 +1742,10 @@
         background-color: #fff;
     }
 
+    .feature-text h3 {
+        margin-top: 20px;
+    }
+
     #columns .feature-text h3 a,
     #columns .feature-text h2 a {
         text-decoration: none;
@@ -2008,6 +2023,10 @@
         width: 100%;
     }
 
+    .node-class a.node-readmore {
+        margin-bottom: 20px;
+    }
+
 
     @supports(object-fit: cover) {
         .courses-cards .title-card .boxes-box-content p:first-child img {
@@ -2144,7 +2163,7 @@
         transition-duration: .5s;
     }
 
-    .photo-grid  p a {
+    .photo-grid p a {
         color: #fff;
         font-weight: 400;
         text-decoration: none !important;
